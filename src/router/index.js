@@ -5,6 +5,10 @@ import Star from "pages/star/index.vue";
 const routes = [
   {
     path: "/",
+    redirect: "/star",
+  },
+  {
+    path: "/",
     name: "Index",
     component: Index,
   },

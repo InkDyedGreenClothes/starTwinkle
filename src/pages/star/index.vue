@@ -1,4 +1,10 @@
+<!--
+ * @Date: 2021-12-09 09:46:44
+ * @LastEditTimes: Do not edit
+ * @Descripttion: describe
+-->
 <template>
+  div
   <canvas id="myCanvas"></canvas>
 </template>
 
@@ -33,13 +39,13 @@ function init() {
   let { starInit, drawStars, aliveUpdate } = useStar(ctx.value, canvas.value);
   // 线条
   let { lineInit, animate } = useLine({ ctx: ctx.value, canvas: canvas.value });
-  lineInit(80);
+  // lineInit(80);
   animateFn = animate;
   aliveUpdateFn = aliveUpdate;
   drawStarsfn = drawStars;
-  starInit(0);
-  document.addEventListener("mousemove", mousemove, false);
-  document.addEventListener("mouseleave", mouseLeave, false);
+  starInit(80);
+  // document.addEventListener("mousemove", mousemove, false);
+  // document.addEventListener("mouseleave", mouseLeave, false);
   loop();
 }
 function mousemove(e) {
@@ -55,8 +61,8 @@ function mousemove(e) {
       switchy.value = false;
     } else {
       switchy.value = true;
-      window.cancelAnimationFrame(stop);
-      animateFn();
+      // window.cancelAnimationFrame(stop);
+      // animateFn();
     }
   }
 }
@@ -72,7 +78,7 @@ function loop() {
   lastTime.value = Date.now();
   timer.value += deltaTime.value;
   if (timer.value > 160) {
-    drawBg();
+    // drawBg();
     drawStarsfn(deltaTime.value);
     timer.value = 0;
   }

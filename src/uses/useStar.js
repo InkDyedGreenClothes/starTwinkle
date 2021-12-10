@@ -4,7 +4,6 @@ import Star from "@/assets/images/star.png";
 export function useStar(ctx, canvas) {
   let star = new Image();
   star.src = Star;
-  let a = 1;
   let stars = [];
   let switchy = ref(false);
   let life = ref(1);
