@@ -4,7 +4,6 @@
  * @Descripttion: describe
 -->
 <template>
-  div
   <canvas id="myCanvas"></canvas>
 </template>
 
@@ -78,7 +77,7 @@ function loop() {
   lastTime.value = Date.now();
   timer.value += deltaTime.value;
   if (timer.value > 160) {
-    // drawBg();
+    drawBg();
     drawStarsfn(deltaTime.value);
     timer.value = 0;
   }
